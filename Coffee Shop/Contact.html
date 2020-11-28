@@ -52,16 +52,17 @@
 
         .page-footer,
         .top-nav-collapse {
-            background-color: #1C2331
+            background-color: #854442;
         }
 
         @media only screen and (max-width:768px) {
             .navbar {
-                background-color: #1C2331
+                background-color: #854442;
             }
         }
+
         .form4 {
-            background-size: cover
+            background-size: cover;
         }
 
         .top {
@@ -119,6 +120,61 @@
             background-color: #854442;
             color: #fff;
             border: 1px solid #BE9B7B;
+        }
+
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style inputs */
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #854442;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #BE9B7B;
+        }
+
+        /* Create two columns that float next to eachother */
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .column,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
         }
     </style>
     <script>
@@ -272,42 +328,41 @@
         </div>
     </nav>
     <!-- Navbar -->
+    <main>
+        <!-- Full Page Intro -->
+        <div class="view"
+            style="background-image: url('Images/Main.jpg'); background-repeat: no-repeat; background-size: cover;">
 
-    <!-- Full Page Intro -->
-    <div class="view"
-        style="background-image: url('Images/Main.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <!-- Mask & flexbox options-->
 
-        <!-- Mask & flexbox options-->
-        <!-- <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> -->
-
-            <div class="form4 top" style="margin-bottom: -50vw;">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-7 col-md-offset-2">
-                            <div class="form-bg">
-                                <form class="form">
-                                    <div class="form-group"> <label class="sr-only">Name</label> <input type="text"
-                                            class="form-control" required="" id="nameNine" placeholder="Your Name">
-                                    </div>
-                                    <div class="form-group"> <label class="sr-only">Email</label> <input type="email"
-                                            class="form-control" required="" id="emailNine" placeholder="Email Address">
-                                    </div>
-                                    <div class="form-group"> <label class="sr-only">Name</label> <textarea
-                                            class="form-control" required="" rows="7" id="messageNine"
-                                            placeholder="Write message"></textarea> </div> <button type="submit"
-                                        class="btn text-center btn-blue">Send Message</button>
-                                </form>
-                            </div>
-                        </div>
+            <div class="container">
+                <br><br><br>
+                <div style="text-align:center">
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <br><br>
+                        <img src="Images/Map.JPG" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <form action="/action_page.php">
+                            <label for="fname" style="color: white;">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <label for="lname" style="color: white;">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <label for="subject" style="color: white;">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.."
+                                style="height:170px"></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
                     </div>
                 </div>
             </div>
-
-        <!-- </div> -->
-        <!-- Mask & flexbox options-->
+            <!-- Mask & flexbox options-->
 
 
-    </div>
+        </div>
+    </main>
     <!-- Full Page Intro -->
     <!--Footer-->
     <footer class="section footer-classic context-dark bg-image "
